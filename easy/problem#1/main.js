@@ -30,3 +30,16 @@ Only one valid answer exists.
  
 
 Follow-up: Can you come up with an algorithm that is less than O(n2) time complexity?*/
+// [1,3,5] target=6
+let holder = [];
+function twoSum(nums, target) {
+  for (let i = 0; i < nums.length; i++) {
+    let secondNum = target - nums[i];
+    if (nums.includes(secondNum)) {
+      holder.push(nums[i], secondNum);
+      return holder;
+    }
+  }
+}
+const x = twoSum([1, 3, 5, 4], 7);
+console.log(x);
