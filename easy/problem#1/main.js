@@ -36,7 +36,7 @@ function twoSum(nums, target) {
   for (let i = 0; i < nums.length; i++) {
     let secondNum = target - nums[i];
     if (nums.includes(secondNum)) {
-      holder.push(nums[i], secondNum);
+      holder.push(i, nums.indexOf(secondNum));
       return holder;
     }
   }
