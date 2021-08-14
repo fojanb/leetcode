@@ -1,12 +1,12 @@
-var isPalindrome = function(x) {
+var isPalindrome = function (x) {
   let str = x.toString();
-  let arr1 = str.split('');
+  let arr1 = str.split("");
   let arr2 = [...arr1].reverse();
   let isEqual = JSON.stringify(arr1) === JSON.stringify(arr2);
-  if(isEqual){
-      return true;
+  if (isEqual) {
+    return true;
+  } else {
+    return false;
   }
-  else {return false;}
-  
 };
-console.log(isPalindrome(100))
+console.log(isPalindrome(121));
