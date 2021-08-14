@@ -1,11 +1,12 @@
-const rev = function (number) {
-  let str = number.toString();
-  let arr = str.split("");
-  if (number < 0) {
-    return parseInt(arr.reverse().join("")) * -1;
-  } else {
-    return parseInt(arr.reverse().join(""));
+var isPalindrome = function(x) {
+  let str = x.toString();
+  let arr1 = str.split('');
+  let arr2 = [...arr1].reverse();
+  let isEqual = JSON.stringify(arr1) === JSON.stringify(arr2);
+  if(isEqual){
+      return true;
   }
+  else {return false;}
+  
 };
-console.log(rev(1020));
-// No need to call the function in LeetCode complier, it does all stuffs itself.
+console.log(isPalindrome(100))
