@@ -104,7 +104,7 @@ function displayInteger() {
         return total;
     }
   });
-  data.integerNumber.innerHTML = `<div class="rnumber">${data.romanNumber} = ${total}</div>`;
+  data.integerNumber.innerHTML = `<div class="rnumber">✔️ ${data.romanNumber} = ${total}</div>`;
 }
 data.integerNumber.addEventListener("convert", displayInteger);
 data.form.addEventListener("submit", handleSubmit);
