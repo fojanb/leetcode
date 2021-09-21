@@ -1,31 +1,38 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Roman to Integer</title>
     <style>
-        body{
-            background-color: rgba(3, 3, 24, 0.979);
-            margin: 50px;
-        }
-        h2{
-            color: darkcyan;
-        }
-        .rnumber{
-            margin-top: 20px;
-            color: darkcyan;
-        }
+      body {
+        background-color: rgba(3, 3, 24, 0.979);
+        margin: 50px;
+      }
+      h2 {
+        color: darkcyan;
+      }
+      .rnumber {
+        margin-top: 20px;
+        color: darkcyan;
+      }
     </style>
-</head>
-<body>
+  </head>
+  <body>
     <h2>Convert Roman Number to Integer Number</h2>
     <form id="form" autocomplete="off">
-        <input type="text" name="RomanNumber" id="RomanNumber" required>
-        <button type="submit">Convert</button>
+      <input
+        type="text"
+        name="RomanNumber"
+        id="RomanNumber"
+        min="1"
+        max="15"
+        required
+      />
+      <button type="submit">Convert</button>
     </form>
     <div class="IntegerNumber"></div>
     <script src="./main.js"></script>
-</body>
+  </body>
 </html>
