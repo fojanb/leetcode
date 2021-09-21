@@ -16,6 +16,7 @@ function handleSubmit(e) {
   e.preventDefault();
   data.romanNumber = e.target.RomanNumber.value;
   data.integerNumber.dispatchEvent(new CustomEvent("convert"));
+  e.target.reset();
 }
 function displayInteger() {
   let romanToArray = data.romanNumber.split("");
@@ -103,7 +104,7 @@ function displayInteger() {
         return total;
     }
   });
-  data.integerNumber.innerHTML = `<div class="rnumber">${total}</div>`;
+  data.integerNumber.innerHTML = `<div class="rnumber">${data.romanNumber} = ${total}</div>`;
 }
 data.integerNumber.addEventListener("convert", displayInteger);
 data.form.addEventListener("submit", handleSubmit);
