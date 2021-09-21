@@ -20,7 +20,7 @@ function handleSubmit(e) {
 function displayInteger() {
   let romanToArray = data.romanNumber.split("");
   let total = 0;
-  // i.e. ['V', 'I', 'M', 'L', 'I', 'X']
+  // i.e. ['I', 'V', 'M', 'L', 'I', 'X']
   romanToArray.map((letter, index) => {
     if (letter === "I") {
       //   Check for next letter if it is "V" or "X"
@@ -45,20 +45,28 @@ function displayInteger() {
           total += data.romanLetters.C - data.romanLetters.X;
           break;
         default:
-          total += data.romanLetters.X;
+          if (romanToArray[index - 1] !== "I") {
+            total += data.romanLetters.X;
+          } else {
+            total = total;
+          }
       }
     }
     if (letter === "C") {
       //   Check for next letter if it is "D" or "M"
       switch (romanToArray[index + 1]) {
         case "D":
-          total += data.romanLetters.D - data.romanLetters.X;
+          total += data.romanLetters.D - data.romanLetters.C;
           break;
         case "M":
-          total += data.romanLetters.M - data.romanLetters.X;
+          total += data.romanLetters.M - data.romanLetters.C;
           break;
         default:
-          total += data.romanLetters.C;
+          if (romanToArray[index - 1] !== "X") {
+            total += data.romanLetters.C;
+          } else {
+            total = total;
+          }
       }
     }
     // ------------
