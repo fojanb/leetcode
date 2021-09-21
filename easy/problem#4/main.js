@@ -21,7 +21,7 @@ function handleSubmit(e) {
 function displayInteger() {
   let romanToArray = data.romanNumber.split("");
   let total = 0;
-  // i.e. ['I', 'V', 'M', 'L', 'I', 'X']
+  // i.e. romanToArray = ['I', 'V', 'M', 'L', 'I', 'X']
   romanToArray.map((letter, index) => {
     if (letter === "I") {
       //   Check for next letter if it is "V" or "X"
