@@ -65,23 +65,39 @@ function displayInteger() {
           if (romanToArray[index - 1] !== "X") {
             total += data.romanLetters.C;
           } else {
-            total = total;
+            total += 0;
           }
       }
     }
     // ------------
     switch (letter) {
       case "V":
-        total += data.romanLetters.V;
+        if (romanToArray[index - 1] !== "I") {
+          total += data.romanLetters.V;
+        } else {
+          total += 0;
+        }
         break;
       case "L":
-        total += data.romanLetters.L;
+        if (romanToArray[index - 1] !== "X") {
+          total += data.romanLetters.L;
+        } else {
+          total += 0;
+        }
         break;
       case "D":
-        total += data.romanLetters.D;
+        if (romanToArray[index - 1] !== "C") {
+          total += data.romanLetters.D;
+        } else {
+          total += 0;
+        }
         break;
       case "M":
-        total += data.romanLetters.M;
+        if (romanToArray[index - 1] !== "C") {
+          total += data.romanLetters.M;
+        } else {
+          total += 0;
+        }
         break;
       default:
         return total;
